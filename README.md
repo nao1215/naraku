@@ -1,4 +1,4 @@
-# naraku (奈落) - API collection for testing go-spectest/spectest
+# naraku (奈落) 
 "Naraku" is a repository created to assess the quality of End-to-End (E2E) tests using [go-spectest/spectest](https://github.com/go-spectest/naraku). Spectest is an E2E testing framework, and to confirm its ease of use, it is essential to create test cases for APIs.
 
 I chose to build APIs to test a wide range of API types.
