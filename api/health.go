@@ -42,8 +42,8 @@ func (ctrl *HealthController) newHealthResponse() *HealthResponse {
 	ver := "unknown"
 	rev := "unknown"
 
-	if version.TagVersion != "" {
-		ver = version.TagVersion
+	if version.Version != "" {
+		ver = version.Version
 	}
 	if version.Revision != "" {
 		rev = version.Revision

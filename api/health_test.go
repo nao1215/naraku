@@ -28,11 +28,11 @@ var _ = Describe("Health api test", func() {
 
 	Context("Success to get health data", func() {
 		BeforeSuite(func() {
-			version.TagVersion = "v0.0.1"
+			version.Version = "v0.0.1"
 			version.Revision = "revision-0.0.1"
 		})
 		defer func() {
-			version.TagVersion = ""
+			version.Version = ""
 			version.Revision = ""
 		}()
 
@@ -141,7 +141,7 @@ func TestNewHealthResponse(t *testing.T) { //nolint:paralleltest
 		},
 	}
 	for _, tt := range tests { //nolint:paralleltest
-		version.TagVersion = tt.args.tagVersion
+		version.Version = tt.args.tagVersion
 		version.Revision = tt.args.revision
 
 		t.Run(tt.name, func(t *testing.T) {

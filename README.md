@@ -17,8 +17,8 @@ Please see the [API Reference](https://go-spectest.github.io/naraku/).
 curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | jq .
 {
   "name": "naraku",
-  "version": "unknown",
-  "revision": "unknown"
+  "version": "v0.0.1",
+  "revision": "79564c979263a1fa893f7d6f2505fb0c26197b4c"
 }
 ```
 

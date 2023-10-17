@@ -18,5 +18,5 @@ func newVersionCmd() *cobra.Command {
 
 // version return naraku command version.
 func version(_ *cobra.Command, _ []string) {
-	fmt.Printf("%s version %s, revision %s (under MIT LICENSE)\n", ver.Name, ver.TagVersion, ver.Revision)
+	fmt.Printf("%s version %s, revision %s (under MIT LICENSE)\n", ver.Name, ver.Version, ver.Revision)
 }

@@ -11,13 +11,13 @@ GOOS        = ""
 GOARCH      = ""
 GO_PKGROOT  = ./...
 GO_PACKAGES = $(shell $(GO_LIST) $(GO_PKGROOT))
-GO_LDFLAGS  = -ldflags '-X github.com/nao1215/naraku/version.Version=${VERSION}'
+GO_LDFLAGS  = -ldflags "-X github.com/go-spectest/naraku/version.Version=${VERSION} -X github.com/go-spectest/naraku/version.Revision=$(GIT_REVISION)"
 
 build:  ## Build binary
 	env GO111MODULE=on GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO_BUILD) $(GO_LDFLAGS) -o $(APP) main.go
 
 server: ## Run server
-	env GO111MODULE=on GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO) run main.go
+	env GO111MODULE=on GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO) run $(GO_LDFLAGS) main.go
 
 generate: ## Generate file automatically
 	#docker-compose up -d db
