@@ -13,6 +13,13 @@ GO_PKGROOT  = ./...
 GO_PACKAGES = $(shell $(GO_LIST) $(GO_PKGROOT))
 GO_LDFLAGS  = -ldflags "-X github.com/go-spectest/naraku/version.Version=${VERSION} -X github.com/go-spectest/naraku/version.Revision=$(GIT_REVISION)"
 
+install-tools: ## Install development tools
+	$(GO) install github.com/google/wire/cmd/wire@latest
+	$(GO) install github.com/swaggo/swag/cmd/swag@latest
+	$(GO) install github.com/k1LoW/tbls@latest
+	$(GO) install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
+	$(GO) install github.com/onsi/ginkgo/ginkgo@latest
+	
 build:  ## Build binary
 	env GO111MODULE=on GOOS=$(GOOS) GOARCH=$(GOARCH) $(GO_BUILD) $(GO_LDFLAGS) -o $(APP) main.go
 
