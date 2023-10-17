@@ -5,7 +5,7 @@
 [![reviewdog](https://github.com/go-spectest/naraku/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/reviewdog.yml)
 
 # naraku (奈落) 
-"Naraku" is a repository created to assess the quality of End-to-End (E2E) tests using [go-spectest/spectest](https://github.com/go-spectest/naraku). Spectest is an E2E testing framework, and to confirm its ease of use, it is essential to create test cases for APIs.
+"Naraku" is a repository created to assess the quality of End-to-End (E2E) tests using [go-spectest/spectest](https://github.com/go-spectest/spectest). Spectest is an E2E testing framework, and to confirm its ease of use, it is essential to create test cases for APIs.
 
 I chose to build APIs to test a wide range of API types. If a useful API is created, it will be deployed using Lambda + API Gateway.
 
