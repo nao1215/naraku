@@ -22,6 +22,9 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
 }
 ```
 
+## Contribution
+Thank you for expressing your willingness to contribute. Contribution is not limited to code modifications alone. If you can provide a simple API specification, there is a possibility of implementing its features. Also, your star on the project repository serves as a source of motivation for our development efforts!
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
