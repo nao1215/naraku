@@ -9,7 +9,7 @@ import (
 func TestMain(t *testing.T) {
 	t.Parallel()
 
-	t.Run("Execute version subcommand", func(t *testing.T) {
+	t.Run("Execute version subcommand", func(t *testing.T) { //nolint:paralleltest
 		exitCode := -1
 		oldOsExit := osExit
 		osExit = func(code int) {
@@ -30,7 +30,7 @@ func TestMain(t *testing.T) {
 		}
 	})
 
-	t.Run("Execution of a non-existent subcommand", func(t *testing.T) {
+	t.Run("Execution of a non-existent subcommand", func(t *testing.T) { //nolint:paralleltest
 		exitCode := -1
 		oldOsExit := osExit
 		osExit = func(code int) {

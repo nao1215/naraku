@@ -8,11 +8,11 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-func TestApi(t *testing.T) {
+func TestApi(t *testing.T) { //nolint:paralleltest
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "API Suite")
 }
 
 func documentDirPath() string {
-	return filepath.Join("..", "..", "docs")
+	return filepath.Join("..", "docs")
 }

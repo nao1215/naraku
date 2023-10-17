@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	"github.com/go-spectest/naraku/version"
+	"github.com/go-spectest/spectest"
 	"github.com/labstack/echo/v4"
 	. "github.com/onsi/ginkgo"
-	"github.com/steinfletcher/apitest"
 	"github.com/zeebo/assert"
 )
 
@@ -37,8 +37,9 @@ var _ = Describe("Health api test", func() {
 		}()
 
 		It("get server name, version, revision", func() {
-			apitest.New().
-				Report(apitest.SequenceDiagram(documentDirPath())).
+			spectest.New().
+				Report(spectest.SequenceDiagram(documentDirPath())).
+				CustomReportName("health_success").
 				Handler(api).
 				Get("/v1/health").
 				Expect(t).
