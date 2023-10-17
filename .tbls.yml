@@ -1,0 +1,2 @@
+dsn: mysql://root:password@127.0.0.1:3306/naraku
+docPath: docs/schema
