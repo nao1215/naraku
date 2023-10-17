@@ -1,3 +1,9 @@
+[![Gosec](https://github.com/go-spectest/naraku/actions/workflows/gosec.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/gosec.yml)
+[![LinuxUnitTest](https://github.com/go-spectest/naraku/actions/workflows/linux_test.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/linux_test.yml)
+[![MacUnitTest](https://github.com/go-spectest/naraku/actions/workflows/mac_test.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/mac_test.yml)
+[![WindowsUnitTest](https://github.com/go-spectest/naraku/actions/workflows/windows_test.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/windows_test.yml)
+[![reviewdog](https://github.com/go-spectest/naraku/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/go-spectest/naraku/actions/workflows/reviewdog.yml)
+
 # naraku (奈落) 
 "Naraku" is a repository created to assess the quality of End-to-End (E2E) tests using [go-spectest/spectest](https://github.com/go-spectest/naraku). Spectest is an E2E testing framework, and to confirm its ease of use, it is essential to create test cases for APIs.
 
