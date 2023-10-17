@@ -18,7 +18,7 @@ require (
 	github.com/spf13/cobra v1.7.0
 	github.com/swaggo/echo-swagger v1.4.0
 	github.com/swaggo/swag v1.16.1
-	github.com/zeebo/assert v1.3.0
+	github.com/zeebo/assert v1.3.1
 )
 
 require (
