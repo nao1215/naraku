@@ -21,9 +21,45 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
   "revision": "79564c979263a1fa893f7d6f2505fb0c26197b4c"
 }
 ```
-
-## Contribution
+## Contribution (How to develop)
 Thank you for expressing your willingness to contribute. Contribution is not limited to code modifications alone. If you can provide a simple API specification, there is a possibility of implementing its features. Also, your star on the project repository serves as a source of motivation for our development efforts!
+
+### Prerequisites
+You need to install the following tools to develop this project.
+| Category | Technology |
+|:---|:---|
+| DB Accessor | [sqlc](https://github.com/sqlc-dev/sqlc) |
+| Swagger generator | [echo-swagger](https://github.com/swaggo/swag) |
+| ER diagram| [tbls](https://github.com/k1LoW/tbls)|
+| Test framework | [ginkgo](https://github.com/onsi/ginkgo)|
+| Dependency Injection |[wire](https://github.com/google/wire)|
+|Build Tools| [make](https://www.gnu.org/software/make/)|
+
+Please install make and Golang using package managers, and other Golang-based tools can be installed using the following command.
+```bash
+make install-tools 
+```
+
+### How to execute server
+```bash
+make server
+```
+
+### How to execute test
+```bash
+make test
+```
+
+### How to add API
+1. Choose a proposal for the API you want to create from the Issues section. If there isn't a proposal for the API you want to create, please create a new Issue.
+2. Fork the go-spectest/naraku repository.
+3. Create a new branch in the forked repository.
+4. Implement the API. Writing unit tests is optional; @nao1215 will add unit tests later if they are not provided.
+5. Create a Pull Request.
+
+At this stage, please refrain from creating APIs that connect to databases or AWS. Initially, @nao1215 will implement sample code for connecting to DB and AWS. 
+
+I expect the APIs you create to be small in scale. You can write the API entry points in the api directory and the corresponding logic within the `api` package. The APIs should be small enough that it is acceptable to write the logic within the `api`` package
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
