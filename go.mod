@@ -1,8 +1,6 @@
 module github.com/go-spectest/naraku
 
-go 1.21
-
-toolchain go1.21.3
+go 1.20
 
 require (
 	github.com/aws/aws-sdk-go v1.45.27
