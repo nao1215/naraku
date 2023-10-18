@@ -39,7 +39,6 @@ var _ = Describe("ULID api test", func() {
 	})
 })
 
-// This test 
 func TestULIDHandler(t *testing.T) {
 	t.Parallel()
 
