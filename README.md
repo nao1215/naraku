@@ -21,6 +21,43 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
   "revision": "79564c979263a1fa893f7d6f2505fb0c26197b4c"
 }
 ```
+
+### /v1/os/:distribution
+Currently, the android distributions are supported.
+```bash
+$ curl  http://localhost:8080/v1/os/android | jq .
+{
+  "items": [
+    {
+      "name": "Android",
+      "version": "1.0",
+      "release": "2008-09-23T00:00:00Z",
+      "api_level": [
+        1
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "1.1",
+      "release": "2009-02-09T00:00:00Z",
+      "api_level": [
+        2
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "1.5",
+      "code_name": "Cupcake",
+      "release": "2009-04-27T00:00:00Z",
+      "api_level": [
+        3
+      ]
+    },
+    ...
+}
+```
+
+
 ## Contribution (How to develop)
 Thank you for expressing your willingness to contribute. Contribution is not limited to code modifications alone. If you can provide a simple API specification, there is a possibility of implementing its features. Also, your star on the project repository serves as a source of motivation for our development efforts!
 
@@ -68,3 +105,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 The name "Naraku" was borrowed from a character in the series InuYaSha. Naraku is a being formed by the accumulation of numerous demons around a human. The inspiration for the name comes from the way multiple APIs gather in the spectest framework. Naraku is a half-demon with excellent defensive abilities. I also hope that these characteristics will manifest in spectest.
 
 Moreover, "Naraku" also means falling into hell. Don't you think creating and testing numerous APIs can be challenging?
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=go-spectest/naraku&type=Date)](https://star-history.com/#go-spectest/naraku&Date)

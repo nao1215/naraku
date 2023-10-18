@@ -29,7 +29,7 @@ server: ## Run server
 generate: ## Generate file automatically
 	#docker-compose up -d db
 	$(GO) generate ./...
-	swag fmt && swag init --output ../docs
+	swag fmt && swag init --output docs
 	#sqlc generate --file server/app/schema/sqlc.yml 
 	#tbls doc --force 
 	wire ./...

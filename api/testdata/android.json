@@ -1,0 +1,220 @@
+{
+  "items": [
+    {
+      "name": "Android",
+      "version": "1.0",
+      "release": "2008-09-23T00:00:00Z",
+      "api_level": [
+        1
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "1.1",
+      "release": "2009-02-09T00:00:00Z",
+      "api_level": [
+        2
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "1.5",
+      "code_name": "Cupcake",
+      "release": "2009-04-27T00:00:00Z",
+      "api_level": [
+        3
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "1.6",
+      "code_name": "Donut",
+      "release": "2009-09-15T00:00:00Z",
+      "api_level": [
+        4
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "2.0 - 2.1",
+      "code_name": "Eclair",
+      "release": "2009-10-26T00:00:00Z",
+      "api_level": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "2.2 - 2.2.3",
+      "code_name": "Froyo",
+      "release": "2010-05-20T00:00:00Z",
+      "api_level": [
+        8
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "2.3 - 2.3.7",
+      "code_name": "Gingerbread",
+      "release": "2010-12-06T00:00:00Z",
+      "api_level": [
+        9,
+        10
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "3.0 - 3.2.6",
+      "code_name": "Honeycomb",
+      "release": "2011-02-22T00:00:00Z",
+      "api_level": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "4.0 - 4.0.4",
+      "code_name": "Ice Cream Sandwich",
+      "release": "2011-10-18T00:00:00Z",
+      "api_level": [
+        14,
+        15
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "4.1 - 4.3.1",
+      "code_name": "Jelly Bean",
+      "release": "2012-07-09T00:00:00Z",
+      "api_level": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "4.4 - 4.4.4",
+      "code_name": "KitKat",
+      "release": "2013-10-31T00:00:00Z",
+      "api_level": [
+        19
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "4.4W - 4.4W.2",
+      "code_name": "4.4W",
+      "release": "2014-06-25T00:00:00Z",
+      "api_level": [
+        20
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "5.0 - 5.1.1",
+      "code_name": "Lollipop",
+      "release": "2014-11-12T00:00:00Z",
+      "api_level": [
+        21,
+        22
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "6.0 - 6.0.1",
+      "code_name": "Marshmallow",
+      "release": "2015-10-05T00:00:00Z",
+      "api_level": [
+        23
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "7.0 - 7.1.2",
+      "code_name": "Nougat",
+      "release": "2016-08-22T00:00:00Z",
+      "api_level": [
+        24,
+        25
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "8.0 - 8.1",
+      "code_name": "Oreo",
+      "release": "2017-08-21T00:00:00Z",
+      "api_level": [
+        26,
+        27
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "9",
+      "code_name": "Pie",
+      "release": "2018-08-06T00:00:00Z",
+      "api_level": [
+        28
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "10",
+      "code_name": "Q",
+      "release": "2019-09-03T00:00:00Z",
+      "api_level": [
+        29
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "11",
+      "code_name": "R",
+      "release": "2020-09-08T00:00:00Z",
+      "api_level": [
+        30
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "12",
+      "code_name": "S",
+      "release": "2021-09-08T00:00:00Z",
+      "api_level": [
+        31
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "12L",
+      "code_name": "Sv2",
+      "release": "2022-03-07T00:00:00Z",
+      "api_level": [
+        32
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "13",
+      "code_name": "Tiramisu",
+      "release": "2022-08-05T00:00:00Z",
+      "api_level": [
+        33
+      ]
+    },
+    {
+      "name": "Android",
+      "version": "14",
+      "code_name": "Upside Down Cake",
+      "release": "2023-10-04T00:00:00Z",
+      "api_level": [
+        34
+      ]
+    }
+  ]
+}

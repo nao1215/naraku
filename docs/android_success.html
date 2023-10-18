@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        #scroll-to-top-button {
+            background-color: #555;
+            border: none;
+            border-radius: 4px;
+            bottom: 20px;
+            color: white;
+            cursor: pointer;
+            display: none;
+            font-size: 18px;
+            outline: none;
+            position: fixed;
+            right: 30px;
+            z-index: 99;
+        }
+
+        .copy-to-clipboard-button {
+            background-color: #fff;
+            border: 1px solid #eee;
+            cursor: pointer;
+            font-size: 12px;
+            outline: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <h2>GET /v1/os/android</h2>
+    <span class="badge badge-success">200</span>
+    <p class="lead"></p>
+    <div class="card text-center">
+        <div class="card-body">
+            <div id="d" class="justify-content-center"></div>
+        </div>
+    </div>
+    <br><br>
+    <p class="lead">Event Log</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Payload</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <tr id="log-0">
+            <th scope="row">1</th>
+            <td>
+                <pre>GET /v1/os/android HTTP/1.1
+Host: sut
+
+</pre>
+                
+            </td>
+        </tr>
+        
+        <tr id="log-1">
+            <th scope="row">2</th>
+            <td>
+                <pre>HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=UTF-8
+
+</pre>
+                
+                    
+                        <pre style="max-height: 1000px; margin-bottom: 0; border: 1px solid #eee;"><code id="event-message-1">{
+    &#34;items&#34;: [
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;1.0&#34;,
+            &#34;release&#34;: &#34;2008-09-23T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                1
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;1.1&#34;,
+            &#34;release&#34;: &#34;2009-02-09T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                2
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;1.5&#34;,
+            &#34;code_name&#34;: &#34;Cupcake&#34;,
+            &#34;release&#34;: &#34;2009-04-27T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                3
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;1.6&#34;,
+            &#34;code_name&#34;: &#34;Donut&#34;,
+            &#34;release&#34;: &#34;2009-09-15T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                4
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;2.0 - 2.1&#34;,
+            &#34;code_name&#34;: &#34;Eclair&#34;,
+            &#34;release&#34;: &#34;2009-10-26T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;2.2 - 2.2.3&#34;,
+            &#34;code_name&#34;: &#34;Froyo&#34;,
+            &#34;release&#34;: &#34;2010-05-20T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                8
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;2.3 - 2.3.7&#34;,
+            &#34;code_name&#34;: &#34;Gingerbread&#34;,
+            &#34;release&#34;: &#34;2010-12-06T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                9,
+                10
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;3.0 - 3.2.6&#34;,
+            &#34;code_name&#34;: &#34;Honeycomb&#34;,
+            &#34;release&#34;: &#34;2011-02-22T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                11,
+                12,
+                13
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;4.0 - 4.0.4&#34;,
+            &#34;code_name&#34;: &#34;Ice Cream Sandwich&#34;,
+            &#34;release&#34;: &#34;2011-10-18T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                14,
+                15
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;4.1 - 4.3.1&#34;,
+            &#34;code_name&#34;: &#34;Jelly Bean&#34;,
+            &#34;release&#34;: &#34;2012-07-09T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                16,
+                17,
+                18
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;4.4 - 4.4.4&#34;,
+            &#34;code_name&#34;: &#34;KitKat&#34;,
+            &#34;release&#34;: &#34;2013-10-31T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                19
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;4.4W - 4.4W.2&#34;,
+            &#34;code_name&#34;: &#34;4.4W&#34;,
+            &#34;release&#34;: &#34;2014-06-25T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                20
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;5.0 - 5.1.1&#34;,
+            &#34;code_name&#34;: &#34;Lollipop&#34;,
+            &#34;release&#34;: &#34;2014-11-12T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                21,
+                22
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;6.0 - 6.0.1&#34;,
+            &#34;code_name&#34;: &#34;Marshmallow&#34;,
+            &#34;release&#34;: &#34;2015-10-05T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                23
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;7.0 - 7.1.2&#34;,
+            &#34;code_name&#34;: &#34;Nougat&#34;,
+            &#34;release&#34;: &#34;2016-08-22T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                24,
+                25
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;8.0 - 8.1&#34;,
+            &#34;code_name&#34;: &#34;Oreo&#34;,
+            &#34;release&#34;: &#34;2017-08-21T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                26,
+                27
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;9&#34;,
+            &#34;code_name&#34;: &#34;Pie&#34;,
+            &#34;release&#34;: &#34;2018-08-06T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                28
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;10&#34;,
+            &#34;code_name&#34;: &#34;Q&#34;,
+            &#34;release&#34;: &#34;2019-09-03T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                29
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;11&#34;,
+            &#34;code_name&#34;: &#34;R&#34;,
+            &#34;release&#34;: &#34;2020-09-08T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                30
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;12&#34;,
+            &#34;code_name&#34;: &#34;S&#34;,
+            &#34;release&#34;: &#34;2021-09-08T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                31
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;12L&#34;,
+            &#34;code_name&#34;: &#34;Sv2&#34;,
+            &#34;release&#34;: &#34;2022-03-07T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                32
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;13&#34;,
+            &#34;code_name&#34;: &#34;Tiramisu&#34;,
+            &#34;release&#34;: &#34;2022-08-05T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                33
+            ]
+        },
+        {
+            &#34;name&#34;: &#34;Android&#34;,
+            &#34;version&#34;: &#34;14&#34;,
+            &#34;code_name&#34;: &#34;Upside Down Cake&#34;,
+            &#34;release&#34;: &#34;2023-10-04T00:00:00Z&#34;,
+            &#34;api_level&#34;: [
+                34
+            ]
+        }
+    ]
+}
+</code></pre>
+                        <button class="copy-to-clipboard-button" data-clipboard-target="#event-message-1">copy to clipboard</button>
+                    
+                
+            </td>
+        </tr>
+        
+        </tbody>
+    </table>
+</div>
+<button onclick="topFunction()" id="scroll-to-top-button" title="Go to top">Back to top</button>
+<script>
+    Diagram.parse("\u0022cli\u0022-\u003e\u0022sut\u0022: (1) GET \/v1\/os\/android\n\u0022sut\u0022-\u003e\u003e\u0022cli\u0022: (2) 200\n").drawSVG("d", {theme: 'simple', 'font-size': 14});
+</script>
+<style>
+    
+</style>
+<script type="application/json" id="metaJson">{"consumer_name":"cli","duration":1098286,"method":"GET","path":"/v1/os/android","report_file_name":"android_success","status_code":200,"testing_target_name":"sut"}</script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>new ClipboardJS('.copy-to-clipboard-button');</script>
+<script>
+    var elements = document.getElementsByTagName('text')
+    var regex = /\((\d{1,3})\)/ 
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].innerHTML) {
+            var found = elements[i].innerHTML.match(regex);
+            if (found && found.length > 0) {
+                const logIndex = parseInt(found[1], 10) - 1;
+                elements[i].style.cursor = 'pointer';
+                elements[i].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.getElementById("log-" + logIndex).scrollIntoView();
+                }, false);
+            }
+        }
+    }
+
+    var scrollToTopBtn = document.getElementById("scroll-to-top-button");
+    window.onscroll = function () {
+        scrollFunction()
+    };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

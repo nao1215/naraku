@@ -15,6 +15,7 @@ jobs:
         with:
           reporter: github-pr-review
           level: warning
+          golangci_lint_flags: --timeout=5m
 
   misspell:
     name: misspell

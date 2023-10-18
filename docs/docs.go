@@ -35,59 +35,21 @@ const docTemplate = `{
                 }
             }
         },
-        "/users": {
-            "post": {
-                "description": "This API crate user record. If the user already exists, it returns an error.",
-                "consumes": [
-                    "application/json"
-                ],
+        "/os/android": {
+            "get": {
+                "description": "This API is for getting android information.",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "users"
+                    "os"
                 ],
-                "summary": "create user.",
-                "parameters": [
-                    {
-                        "description": "user name. 0 \u003c len \u003c 21",
-                        "name": "name",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "description": "user biography. max length is 300",
-                        "name": "biography",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "description": "email address. max length is 320",
-                        "name": "email",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
+                "summary": "Get android information",
                 "responses": {
-                    "201": {
-                        "description": "Created",
+                    "200": {
+                        "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/model.User"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "type": "string"
+                            "$ref": "#/definitions/api.OSResponse"
                         }
                     }
                 }
@@ -112,37 +74,43 @@ const docTemplate = `{
                 }
             }
         },
-        "model.User": {
+        "api.OSResponse": {
             "type": "object",
-            "required": [
-                "biography",
-                "email",
-                "id",
-                "name"
-            ],
             "properties": {
-                "biography": {
-                    "description": "Biography is user self introduction",
-                    "type": "string",
-                    "maxLength": 300,
-                    "minLength": 1
+                "items": {
+                    "description": "@Description\tItems is os information list.",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/model.OS"
+                    }
+                }
+            }
+        },
+        "model.OS": {
+            "type": "object",
+            "properties": {
+                "api_level": {
+                    "description": "APILevel is os APILevel.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
                 },
-                "email": {
-                    "description": "Email is user email address",
-                    "type": "string",
-                    "maxLength": 320
-                },
-                "id": {
-                    "description": "ID is user id. ULID（Universally Unique Lexicographically Sortable Identifier）",
-                    "type": "string",
-                    "maxLength": 26,
-                    "minLength": 26
+                "code_name": {
+                    "description": "CodeName is os CodeName.",
+                    "type": "string"
                 },
                 "name": {
-                    "description": "Name is user name",
-                    "type": "string",
-                    "maxLength": 20,
-                    "minLength": 1
+                    "description": "Name is os Name.",
+                    "type": "string"
+                },
+                "release": {
+                    "description": "Release is os Release.",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "Version is os Version.",
+                    "type": "string"
                 }
             }
         }
