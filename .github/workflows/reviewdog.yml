@@ -15,6 +15,7 @@ jobs:
         with:
           reporter: github-pr-review
           level: warning
+          args: --timeout=5m
 
   misspell:
     name: misspell
