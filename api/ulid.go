@@ -1,7 +1,7 @@
 package api
 
 import (
-	"math/rand"
+	"crypto/rand"
 	"net/http"
 	"time"
 
@@ -35,7 +35,7 @@ func (ctrl *ULIDController) generate(c echo.Context) error {
 
 // newULIDResponse returns ULIDResponse struct.
 func (ctrl *ULIDController) newULIDResponse() *ULIDResponse {
-	entropy := rand.New(rand.NewSource(time.Now().UnixNano()))
+	entropy := rand.Reader
 	ms := ulid.Timestamp(time.Now())
 	return &ULIDResponse{ULID: ulid.MustNew(ms, entropy).String()}
 }
