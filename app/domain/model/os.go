@@ -9,9 +9,9 @@ type OS struct {
 	// Version is os Version.
 	Version string `json:"version"`
 	// CodeName is os CodeName.
-	CodeName string `json:"code_ame"`
+	CodeName string `json:"code_name,omitempty"`
 	// Release is os Release.
 	Release time.Time `json:"release"`
 	// APILevel is os APILevel.
-	APILevel int `json:"api_level,omitempty"`
+	APILevel []uint `json:"api_level,omitempty"`
 }
