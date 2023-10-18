@@ -13,6 +13,7 @@ require (
 	github.com/k1LoW/tbls v1.70.2
 	github.com/kyleconroy/sqlc v1.19.1
 	github.com/labstack/echo/v4 v4.11.2
+	github.com/oklog/ulid/v2 v2.1.0
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.28.0
 	github.com/spf13/cobra v1.7.0

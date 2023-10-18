@@ -39,6 +39,8 @@ type API struct {
 	healthController *HealthController
 	// osController is a controller for /os API.
 	osController *OSController
+	// ulidController is a controller for /ulid API.
+	ulidController *ULIDController
 }
 
 // NewAPI return api struct.
@@ -48,7 +50,6 @@ func NewAPI() *API {
 	api.naraku = di.NewNaraku()
 	api.setControllers()
 	api.route()
-
 	return api
 }
 
@@ -57,6 +58,7 @@ func NewAPI() *API {
 func (a *API) setControllers() {
 	a.healthController = NewHealthController()
 	a.osController = NewOSController()
+	a.ulidController = NewULIDController()
 }
 
 // route set routing.
@@ -64,5 +66,6 @@ func (a *API) setControllers() {
 func (a *API) route() {
 	a.GET("/v1/health", a.healthController.health)
 	a.GET("/v1/os/:distribution", a.osController.handleGetOS)
+	a.GET("/v1/ulid", a.ulidController.generate)
 	a.GET("/swagger/*", echoSwagger.WrapHandler)
 }
