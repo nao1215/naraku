@@ -46,10 +46,10 @@ Any other useful data to share.
 	buf.WriteString(additionalDetails)
 
 	body := buf.String()
-	url := "https://github.com/go-spect/naraku/issues/new?title=[Bug Report] Title&body=" + url.QueryEscape(body)
+	url := "https://github.com/go-spectest/naraku/issues/new?title=[Bug Report] Title&body=" + url.QueryEscape(body)
 
 	if !openBrowser(url) {
-		fmt.Print("Please file a new issue at https://github.com/go-spect/naraku/issues/new using this template:\n\n")
+		fmt.Print("Please file a new issue at https://github.com/go-spectest/naraku/issues/new using this template:\n\n")
 		fmt.Print(body)
 	}
 
