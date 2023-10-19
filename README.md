@@ -58,7 +58,7 @@ $ curl -X GET http://localhost:8080/v1/os/android | jq .
 ```
 
 ### GET /v1/ulid
-`GET /v1/ulid` endpoint was implemented by person @aqyuki.
+`GET /v1/ulid` endpoint was implemented by [@aqyuki](https://github.com/aqyuki).
 ```bash
 curl -X GET http://localhost:8080/v1/ulid | jq .
 {
