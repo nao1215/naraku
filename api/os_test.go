@@ -32,4 +32,18 @@ var _ = Describe("OS api test", func() {
 				End()
 		})
 	})
+
+	Context("Success to GET /v1/os/debian", func() {
+		It("get version, code name, release date", func() {
+			spectest.New().
+				Report(spectest.SequenceDiagram(documentDirPath())).
+				CustomReportName("debian_success").
+				Handler(api).
+				Get("/v1/os/debian").
+				Expect(t).
+				BodyFromFile(filepath.Join("testdata", "debian.json")).
+				Status(http.StatusOK).
+				End()
+		})
+	})
 })
