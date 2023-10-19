@@ -11,7 +11,7 @@ import (
 	"github.com/zeebo/assert"
 )
 
-func TestULID(t *testing.T) {
+func TestULID(t *testing.T) { //nolint
 	spectest.New().
 		Report(spectest.SequenceDiagram(documentDirPath())).
 		CustomReportName("ulid_success").
@@ -23,7 +23,7 @@ func TestULID(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			defer res.Body.Close()
+			defer res.Body.Close() //nolint
 
 			var got ULIDResponse
 			if err := json.Unmarshal(body, &got); err != nil {
