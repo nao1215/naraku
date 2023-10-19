@@ -12,7 +12,7 @@ I chose to build APIs to test a wide range of API types. If a useful API is crea
 ## API Reference
 Please see the [API Reference](https://go-spectest.github.io/naraku/).
 
-### /v1/health
+### GET /v1/health
 ```bash
 curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | jq .
 {
@@ -22,10 +22,10 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
 }
 ```
 
-### /v1/os/:distribution
+### GET /v1/os/:distribution
 Currently, the android distributions are supported.
 ```bash
-$ curl  http://localhost:8080/v1/os/android | jq .
+$ curl -X GET http://localhost:8080/v1/os/android | jq .
 {
   "items": [
     {
@@ -57,6 +57,14 @@ $ curl  http://localhost:8080/v1/os/android | jq .
 }
 ```
 
+### GET /v1/ulid
+`GET /v1/ulid` endpoint was implemented by person @aqyuki.
+```bash
+curl -X GET http://localhost:8080/v1/ulid | jq .
+{
+  "ulid": "01HD3107RHMXD5K0R02TVDPZHB"
+}
+```
 
 ## Contribution (How to develop)
 Thank you for expressing your willingness to contribute. Contribution is not limited to code modifications alone. If you can provide a simple API specification, there is a possibility of implementing its features. Also, your star on the project repository serves as a source of motivation for our development efforts!
