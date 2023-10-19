@@ -28,6 +28,8 @@ func (ctrl *OSController) handleGetOS(c echo.Context) error {
 	switch distribution {
 	case "android":
 		return ctrl.androidInfo(c)
+	case "debian":
+		return ctrl.debianInfo(c)
 	default:
 		return c.String(http.StatusNotFound, "Unknown OS")
 	}
@@ -206,6 +208,125 @@ func (ctrl *OSController) androidInfo(c echo.Context) error {
 				CodeName: "Upside Down Cake",
 				Release:  time.Date(2023, 10, 4, 0, 0, 0, 0, time.UTC),
 				APILevel: []uint{34},
+			},
+		},
+	})
+}
+
+// debianInfo return debian information.
+//
+//	@Summary		Get debian information
+//	@Description	This API is for getting debian information.
+//	@Tags			os
+//	@Produce		json
+//	@Success		200	{object}	OSResponse
+//	@Router			/os/debian [get]
+//
+// TODO: This is mock code. Implement the datastore code.
+func (ctrl *OSController) debianInfo(c echo.Context) error {
+	return c.JSON(http.StatusOK, &OSResponse{
+		Items: []model.OS{
+			{
+				Name:     "Debian",
+				Version:  "1.1",
+				CodeName: "Buzz",
+				Release:  time.Date(1996, 6, 16, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "1.2",
+				CodeName: "Rex",
+				Release:  time.Date(1996, 12, 12, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "1.3",
+				CodeName: "Bo",
+				Release:  time.Date(1997, 6, 5, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "2.0",
+				CodeName: "Hamm",
+				Release:  time.Date(1998, 7, 24, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "2.1",
+				CodeName: "Slink",
+				Release:  time.Date(1999, 3, 9, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "2.2",
+				CodeName: "Potato",
+				Release:  time.Date(2000, 8, 15, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "3.0",
+				CodeName: "Woody",
+				Release:  time.Date(2002, 7, 19, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "3.1",
+				CodeName: "Sarge",
+				Release:  time.Date(2005, 6, 6, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "4.0",
+				CodeName: "Etch",
+				Release:  time.Date(2007, 4, 8, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "5.0",
+				CodeName: "Lenny",
+				Release:  time.Date(2009, 2, 14, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "6.0",
+				CodeName: "Squeeze",
+				Release:  time.Date(2011, 2, 6, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "7.0",
+				CodeName: "Wheezy",
+				Release:  time.Date(2013, 5, 4, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "8.0",
+				CodeName: "Jessie",
+				Release:  time.Date(2015, 4, 25, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "9.0",
+				CodeName: "Stretch",
+				Release:  time.Date(2017, 6, 17, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "10.0",
+				CodeName: "Buster",
+				Release:  time.Date(2019, 7, 6, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "11.0",
+				CodeName: "Bullseye",
+				Release:  time.Date(2021, 8, 14, 0, 0, 0, 0, time.UTC),
+			},
+			{
+				Name:     "Debian",
+				Version:  "12.0",
+				CodeName: "Bookworm",
+				Release:  time.Date(2023, 6, 10, 0, 0, 0, 0, time.UTC),
 			},
 		},
 	})

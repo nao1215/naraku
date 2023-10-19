@@ -23,7 +23,7 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
 ```
 
 ### GET /v1/os/:distribution
-Currently, the android distributions are supported.
+Currently, the android, debian distributions are supported.
 ```bash
 $ curl -X GET http://localhost:8080/v1/os/android | jq .
 {
