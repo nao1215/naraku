@@ -22,6 +22,14 @@ curl -X GET "http://localhost:8080/v1/health" -H  "accept: application/json" | j
 }
 ```
 
+### GET /v1/ip
+```bash
+$ curl  http://localhost:8080/v1/ip | jq .
+{
+  "global_ip": "127.0.0.1"  # localhost :)
+}
+```
+
 ### GET /v1/os/:distribution
 Currently, the android, debian distributions are supported.
 ```bash
