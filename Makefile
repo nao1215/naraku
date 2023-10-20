@@ -38,7 +38,7 @@ clean: ## Clean project
 	-rm -rf $(APP) cover.out cover.html
 
 test: ## Start unit test for server
-	env GOOS=$(GOOS) $(GO_TEST) -cover $(GO_PKGROOT) -coverprofile=coverage.out
+	env GOOS=$(GOOS) $(GO_TEST) -cover -coverpkg=$(GO_PKGROOT) -coverprofile=coverage.out $(GO_PKGROOT)
 	$(GO_TOOL) cover -html=coverage.out -o coverage.html
 	
 .DEFAULT_GOAL := help
