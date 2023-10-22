@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   db:
     image: mysql:latest
@@ -9,18 +9,26 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
       - ./server/app/schema/schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
   localstack:
-    container_name: "emigre-localstack_main"
-    image: localstack/localstack
+    container_name: "naraku-localstack"
+    image: localstack/localstack:latest
     ports:
-      - "127.0.0.1:4566:4566" # LocalStack Gateway         
+      - "127.0.0.1:4566:4566" # LocalStack Gateway
       - "127.0.0.1:4510-4559:4510-4559" # external services port range
     environment:
+      - LOCALSTACK_API_KEY=${LOCALSTACK_API_KEY- }
       - DEBUG=${DEBUG-}
       - DOCKER_HOST=unix:///var/run/docker.sock
+      - DNS_LOCAL_NAME_PATTERNS='.*cloudfront\.net'
+      - CLOUDFRONT_STATIC_PORTS= 1
     volumes:
-      - "${LOCALSTACK_VOLUME_DIR:-./localstack}:/var/lib/localstack"
+      - "${LOCALSTACK_VOLUME_DIR:-./data/localstack}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./scripts:/etc/localstack/init/ready.d"
+
+volumes:
+  scripts:
+  data:
