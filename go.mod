@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-sdk-go v1.46.6
 	github.com/caarlos0/env/v9 v9.0.0
 	github.com/charmbracelet/log v0.2.5
-	github.com/go-spectest/spectest v0.0.7
+	github.com/go-spectest/spectest v0.0.8
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/google/go-cmp v0.6.0
 	github.com/google/wire v0.5.0
