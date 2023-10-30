@@ -3,7 +3,7 @@ module github.com/go-spectest/naraku
 go 1.20
 
 require (
-	github.com/aws/aws-sdk-go v1.46.6
+	github.com/aws/aws-sdk-go v1.46.7
 	github.com/caarlos0/env/v9 v9.0.0
 	github.com/charmbracelet/log v0.2.5
 	github.com/go-spectest/spectest v0.0.7
