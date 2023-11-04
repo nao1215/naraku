@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
+	"path/filepath"
 	"testing"
 	"unicode/utf8"
 
@@ -15,6 +16,10 @@ func TestULID(t *testing.T) { //nolint
 	spectest.New().
 		Report(spectest.SequenceDiagram(documentDirPath())).
 		CustomReportName("ulid_success").
+		Report(spectest.SequenceReport(spectest.ReportFormatterConfig{
+			Path: filepath.Join("..", "docs", "id"),
+			Kind: spectest.ReportKindMarkdown,
+		})).
 		Handler(NewAPI()).
 		Get("/v1/ulid").
 		Expect(t).

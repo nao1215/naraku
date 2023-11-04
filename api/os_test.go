@@ -24,6 +24,10 @@ var _ = Describe("OS api test", func() {
 			spectest.New().
 				Report(spectest.SequenceDiagram(documentDirPath())).
 				CustomReportName("android_success").
+				Report(spectest.SequenceReport(spectest.ReportFormatterConfig{
+					Path: filepath.Join("..", "docs", "os"),
+					Kind: spectest.ReportKindMarkdown,
+				})).
 				Handler(api).
 				Get("/v1/os/android").
 				Expect(t).
@@ -38,6 +42,10 @@ var _ = Describe("OS api test", func() {
 			spectest.New().
 				Report(spectest.SequenceDiagram(documentDirPath())).
 				CustomReportName("debian_success").
+				Report(spectest.SequenceReport(spectest.ReportFormatterConfig{
+					Path: filepath.Join("..", "docs", "os"),
+					Kind: spectest.ReportKindMarkdown,
+				})).
 				Handler(api).
 				Get("/v1/os/debian").
 				Expect(t).

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"path/filepath"
 	"reflect"
 	"testing"
 
@@ -40,6 +41,10 @@ var _ = Describe("Health api test", func() {
 			spectest.New().
 				Report(spectest.SequenceDiagram(documentDirPath())).
 				CustomReportName("health_success").
+				Report(spectest.SequenceReport(spectest.ReportFormatterConfig{
+					Path: filepath.Join("..", "docs", "health"),
+					Kind: spectest.ReportKindMarkdown,
+				})).
 				Handler(api).
 				Get("/v1/health").
 				Expect(t).

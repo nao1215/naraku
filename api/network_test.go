@@ -2,6 +2,7 @@ package api
 
 import (
 	"net/http"
+	"path/filepath"
 
 	"github.com/go-spectest/spectest"
 	. "github.com/onsi/ginkgo"
@@ -23,6 +24,10 @@ var _ = Describe("Network api test", func() {
 			spectest.New().
 				Report(spectest.SequenceDiagram(documentDirPath())).
 				CustomReportName("ip_success").
+				Report(spectest.SequenceReport(spectest.ReportFormatterConfig{
+					Path: filepath.Join("..", "docs", "network"),
+					Kind: spectest.ReportKindMarkdown,
+				})).
 				Handler(api).
 				Get("/v1/ip").
 				Headers(map[string]string{"X-Real-IP": "127.0.0.1"}).

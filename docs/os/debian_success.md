@@ -1,0 +1,140 @@
+## GET /v1/os/debian
+![Badge](https://img.shields.io/badge/200-green)
+  
+```mermaid
+sequenceDiagram
+    autonumber
+    cli->>sut: GET /v1/os/debian
+    sut-->>cli: 200
+```
+  
+## Event log
+#### Event 1
+  
+GET /v1/os/debian HTTP/1.1  
+Host: sut  
+  
+
+  
+---
+  
+#### Event 2
+  
+HTTP/1.1 200 OK  
+Connection: close  
+Content-Type: application/json; charset=UTF-8  
+  
+
+  
+```json
+{
+    "items": [
+        {
+            "name": "Debian",
+            "version": "1.1",
+            "code_name": "Buzz",
+            "release": "1996-06-16T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "1.2",
+            "code_name": "Rex",
+            "release": "1996-12-12T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "1.3",
+            "code_name": "Bo",
+            "release": "1997-06-05T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "2.0",
+            "code_name": "Hamm",
+            "release": "1998-07-24T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "2.1",
+            "code_name": "Slink",
+            "release": "1999-03-09T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "2.2",
+            "code_name": "Potato",
+            "release": "2000-08-15T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "3.0",
+            "code_name": "Woody",
+            "release": "2002-07-19T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "3.1",
+            "code_name": "Sarge",
+            "release": "2005-06-06T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "4.0",
+            "code_name": "Etch",
+            "release": "2007-04-08T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "5.0",
+            "code_name": "Lenny",
+            "release": "2009-02-14T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "6.0",
+            "code_name": "Squeeze",
+            "release": "2011-02-06T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "7.0",
+            "code_name": "Wheezy",
+            "release": "2013-05-04T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "8.0",
+            "code_name": "Jessie",
+            "release": "2015-04-25T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "9.0",
+            "code_name": "Stretch",
+            "release": "2017-06-17T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "10.0",
+            "code_name": "Buster",
+            "release": "2019-07-06T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "11.0",
+            "code_name": "Bullseye",
+            "release": "2021-08-14T00:00:00Z"
+        },
+        {
+            "name": "Debian",
+            "version": "12.0",
+            "code_name": "Bookworm",
+            "release": "2023-06-10T00:00:00Z"
+        }
+    ]
+}
+
+```
+  
+---
+  
