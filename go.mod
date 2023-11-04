@@ -17,7 +17,7 @@ require (
 	github.com/labstack/echo/v4 v4.11.2
 	github.com/oklog/ulid/v2 v2.1.0
 	github.com/onsi/ginkgo v1.16.5
-	github.com/onsi/gomega v1.28.0
+	github.com/onsi/gomega v1.29.0
 	github.com/spf13/cobra v1.7.0
 	github.com/swaggo/echo-swagger v1.4.1
 	github.com/swaggo/swag v1.16.2
