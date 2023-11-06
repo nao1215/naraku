@@ -205,12 +205,12 @@ github.com/go-playground/validator/v10 v10.15.4 h1:zMXza4EpOdooxPel5xDqXEdXG5r+W
 github.com/go-playground/validator/v10 v10.15.4/go.mod h1:9iXMNT7sEkjXb0I+enO7QXmzG6QCsPWY4zveKFVRSyU=
 github.com/go-spectest/diff v0.0.0-20231006143314-ce490574d4a9 h1:I05FIUaZLNe9Jo6ZCvODDGBqHMk3TYd7V/wV9dZhwXk=
 github.com/go-spectest/diff v0.0.0-20231006143314-ce490574d4a9/go.mod h1:wWRXl4ClWLDIPkL/lS8SSxojHRg1cGngvPcya/mYhf0=
-github.com/go-spectest/markdown v0.0.2 h1:9N+qfXNzsHbgPdWsYIb2jW7VBuE4ThIUJh7+BeLRKIg=
-github.com/go-spectest/markdown v0.0.2/go.mod h1:CA24IJfG0EjqL1s93XEfKOjvWg8zUTC2fZY/eQcTNnQ=
+github.com/go-spectest/markdown v0.0.6 h1:S1KBMTYLwaF+gscqdG2XU4ne0axqAWDuFuGrOOv2a80=
+github.com/go-spectest/markdown v0.0.6/go.mod h1:OaFedfVlu5+eqe5tI2j3+LD/39T7k5JZAklxTul98EQ=
 github.com/go-spectest/mermaid v0.0.1 h1:Mi4dxGbdW1swgOqsUaSNQaKHO/mgO7Afk0Qwt4ASa2Y=
 github.com/go-spectest/mermaid v0.0.1/go.mod h1:S3YmRsGuV/EsSadoMn1C/XHr8+aXZ33UON8nuD+xi3w=
-github.com/go-spectest/spectest v0.0.12 h1:jlFF6Vpht2v2Oxx9fOAh43Cp5pykozCHE1eqSookcq0=
-github.com/go-spectest/spectest v0.0.12/go.mod h1:DgAHTBBWiClxsLvR9w+MCQe8fgH3mlYy+jt77PyoOGI=
+github.com/go-spectest/spectest v0.0.13 h1:u+7zTfDXgu+/kiRapQ45KbeJAbHJSfZYtyYKkuc2s1M=
+github.com/go-spectest/spectest v0.0.13/go.mod h1:4YPpb3U4XCTi0cBZsrtzsBCIFJCvPxaSlywt3WKdHRM=
 github.com/go-sql-driver/mysql v1.7.1 h1:lUIinVbN1DY0xBg0eMOzmmtGoHwWBbvnWubQUrtU8EI=
 github.com/go-sql-driver/mysql v1.7.1/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9S1MCJN5yJMI=
 github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0/go.mod h1:fyg7847qk6SyHyPtNmDHnmrv/HOrqktSC+C9fM+CJOE=
@@ -337,6 +337,8 @@ github.com/k1LoW/go-github-client/v49 v49.1.11 h1:Z6xrkMu1R8Ps7QpBzr0fnUo4U/A82A
 github.com/k1LoW/go-github-client/v49 v49.1.11/go.mod h1:ggvCAtEqFEY3G4pF+qaY+BdnwOOC5BbgZzWc/Q5H4F4=
 github.com/k1LoW/tbls v1.70.2 h1:cID2Q+we7UxkevbEYpEEXJiXJCDhbCgRMLL3wj+f+vc=
 github.com/k1LoW/tbls v1.70.2/go.mod h1:ibJpu29HX415KedRszjn67QfQ6ea3yXXBKkxmgT5e0E=
+github.com/karrick/godirwalk v1.17.0 h1:b4kY7nqDdioR/6qnbHQyDvmA17u5G1cZ6J+CZXwSWoI=
+github.com/karrick/godirwalk v1.17.0/go.mod h1:j4mkqPuvaLI8mp1DroR3P6ad7cyYd4c1qeJ3RV7ULlk=
 github.com/klauspost/asmfmt v1.3.2 h1:4Ri7ox3EwapiOjCki+hw14RyKk201CN4rzyCJRFLpK4=
 github.com/klauspost/asmfmt v1.3.2/go.mod h1:AG8TuvYojzulgDAMCnYn50l/5QV3Bs/tp6j0HLHbNSE=
 github.com/klauspost/compress v1.13.6/go.mod h1:/3/Vjq9QcHkK5uEr5lBEmyoZ1iFhe47etQ6QUkpK6sk=

@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go v1.46.6
 	github.com/caarlos0/env/v9 v9.0.0
 	github.com/charmbracelet/log v0.2.5
-	github.com/go-spectest/spectest v0.0.12
+	github.com/go-spectest/spectest v0.0.13
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/google/go-cmp v0.6.0
 	github.com/google/wire v0.5.0
@@ -96,7 +96,7 @@ require (
 	github.com/go-openapi/swag v0.19.15 // indirect
 	github.com/go-playground/validator/v10 v10.15.4 // indirect
 	github.com/go-spectest/diff v0.0.0-20231006143314-ce490574d4a9 // indirect
-	github.com/go-spectest/markdown v0.0.2 // indirect
+	github.com/go-spectest/markdown v0.0.6 // indirect
 	github.com/go-spectest/mermaid v0.0.1 // indirect
 	github.com/goccy/go-graphviz v0.1.1 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
@@ -132,6 +132,7 @@ require (
 	github.com/k1LoW/ffff v0.2.0 // indirect
 	github.com/k1LoW/fontdir v0.1.1 // indirect
 	github.com/k1LoW/go-github-client/v49 v49.1.11 // indirect
+	github.com/karrick/godirwalk v1.17.0 // indirect
 	github.com/klauspost/asmfmt v1.3.2 // indirect
 	github.com/klauspost/compress v1.17.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.5 // indirect
