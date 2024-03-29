@@ -7,7 +7,7 @@ toolchain go1.21.1
 require (
 	github.com/aws/aws-sdk-go v1.46.6
 	github.com/caarlos0/env/v9 v9.0.0
-	github.com/charmbracelet/log v0.2.5
+	github.com/charmbracelet/log v0.4.0
 	github.com/go-spectest/spectest v0.0.12
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/google/go-cmp v0.6.0
@@ -68,7 +68,7 @@ require (
 	github.com/bytecodealliance/wasmtime-go/v8 v8.0.0 // indirect
 	github.com/census-instrumentation/opencensus-proto v0.4.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
-	github.com/charmbracelet/lipgloss v0.8.0 // indirect
+	github.com/charmbracelet/lipgloss v0.10.0 // indirect
 	github.com/cli/go-gh/v2 v2.3.0 // indirect
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/cloudflare/circl v1.3.3 // indirect
@@ -163,7 +163,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
-	github.com/rivo/uniseg v0.4.4 // indirect
+	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/riza-io/grpc-go v0.2.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/sahilm/fuzzy v0.1.0 // indirect
